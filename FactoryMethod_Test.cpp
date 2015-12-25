@@ -5,20 +5,14 @@
 #include "FactoryMethod.h"
 
 int  main(){
-    auto pfactory = new design::FactoryMethod();
-    auto p = pfactory->Create();
+    auto p = design::FactoryMethod().Create();
     cout << p->str() << endl;
-    delete pfactory;
     delete p;
-    pfactory = new design::FactoryMethodA();
-    p = pfactory->Create();
+    p = design::FactoryMethodA().Create();
     cout << p->str() << endl;
-    delete pfactory;
     delete p;
-    pfactory = new design::FactoryMethodB();
-    p = pfactory->Create();
+    p = design::FactoryMethodB().Create();
     cout << p->str() << endl;
-    delete pfactory;
     delete p;
     return 1;
 }
